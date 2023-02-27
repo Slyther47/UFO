@@ -1,15 +1,15 @@
 import GLOOP.*;
 public class Asteroid{ 
-    private GLKugel kugel;
+    private GLKugel kugel1;
     //[...]
 
     public Asteroid(){
-        kugel = new GLKugel(0,1000,0, 50, "src/img/Krater.jpg");
+        kugel1 = new GLKugel(0,1000,0, 50, "src/img/Krater.jpg");
         //[...]
     }
 
     public void bewegeDich(){
-        kugel.verschiebe(0,-0.5,0);  
+        kugel1.verschiebe(0,-0.5,0);
         //[...]
     }
 

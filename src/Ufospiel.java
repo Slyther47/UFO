@@ -27,11 +27,18 @@ public class Ufospiel{
     public void fuehreAus(){
         while(!tastatur.esc()){           
             asteroid1.bewegeDich();
-            if (tastatur.links())
+            if (tastatur.links() && UFO.gibX() > -600) {
                 UFO.bewegeLinks();
-            if (tastatur.rechts())
+            }
+            if (tastatur.rechts() && UFO.gibX() < 600) {
                 UFO.bewegeRechts();
-
+            }
+            if (tastatur.oben() && UFO.gibY() < 700){
+                UFO.bewegeHoch();
+            }
+            if (tastatur.unten() && UFO.gibY() > -300){
+                UFO.bewegeRunter();
+            }
             Sys.warte();
         }
         Sys.beenden(); 
